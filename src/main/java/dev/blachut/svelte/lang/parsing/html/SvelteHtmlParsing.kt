@@ -2,6 +2,7 @@ package dev.blachut.svelte.lang.parsing.html
 
 import com.intellij.codeInsight.daemon.XmlErrorBundle
 import com.intellij.lang.PsiBuilder
+import com.intellij.lang.ecmascript6.ES6StubElementTypes
 import com.intellij.psi.tree.IElementType
 import com.intellij.psi.xml.XmlElementType
 import com.intellij.psi.xml.XmlTokenType
@@ -55,6 +56,11 @@ class SvelteHtmlParsing(builder: PsiBuilder) : ExtendableHtmlParsing(builder) {
             return false
         }
         return super.isSingleTag(tagName, originalTagName)
+    }
+
+    override fun parseDocument() {
+        builder.mark().done(ES6StubElementTypes.EXPORT_DEFAULT_ASSIGNMENT)
+        super.parseDocument()
     }
 
     override fun hasCustomTagContent(): Boolean {
