@@ -11,7 +11,7 @@ import com.intellij.psi.tree.IElementType
 import dev.blachut.svelte.lang.SvelteJSLanguage
 
 class SvelteJSParser(builder: PsiBuilder) : ES6Parser<ES6ExpressionParser<*>, ES6StatementParser<*>,
-    ES6FunctionParser<*>, JSPsiTypeParser<*>>(SvelteJSLanguage.INSTANCE, builder) {
+    ES6FunctionParser<*>, JSPsiTypeParser<*>>(SvelteJSLanguage.INSTANCE, SvelteJSPsiBuilder(builder)) {
     init {
         myStatementParser = object : ES6StatementParser<SvelteJSParser>(this) {
             override fun getVariableElementType(): IElementType {
