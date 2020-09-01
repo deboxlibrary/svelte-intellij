@@ -68,5 +68,6 @@
                                         implementationClass="dev.blachut.svelte.lang.SvelteJSSpecificHandlersFactory"/>
         <analysisHandlersFactory language="SvelteJS"
                                  implementationClass="dev.blachut.svelte.lang.SvelteJSAnalysisHandlersFactory"/>
+        <indexedFileTypeProvider implementation="dev.blachut.svelte.lang.SvelteIndexedFileTypeProvider"/>
     </extensions>
 </idea-plugin>
