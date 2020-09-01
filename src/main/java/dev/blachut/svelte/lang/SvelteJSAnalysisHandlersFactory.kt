@@ -2,7 +2,6 @@
 package dev.blachut.svelte.lang
 
 import com.intellij.codeInsight.daemon.impl.analysis.HighlightInfoHolder
-import com.intellij.codeInspection.InspectionSuppressor
 import com.intellij.lang.ecmascript6.validation.ES6AnalysisHandlersFactory
 import com.intellij.lang.javascript.DialectOptionHolder
 import com.intellij.lang.javascript.validation.JSKeywordHighlighterVisitor
