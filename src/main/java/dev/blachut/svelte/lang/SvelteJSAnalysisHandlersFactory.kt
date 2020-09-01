@@ -21,8 +21,4 @@ class SvelteJSAnalysisHandlersFactory : ES6AnalysisHandlersFactory() {
     ): JSKeywordHighlighterVisitor {
         return SvelteKeywordHighlighterVisitor(holder)
     }
-
-    override fun getInspectionSuppressor(): InspectionSuppressor {
-        return SvelteJSInspectionSuppressor
-    }
 }
